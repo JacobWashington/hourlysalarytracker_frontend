@@ -21,7 +21,7 @@
 }
 
 /* Content styles */
-.content {
+.landing-content {
   position: relative; /* Needed for z-index to work */
   display: flex;
   flex-direction: column;

@@ -35,7 +35,7 @@ const SignInForm = () => {
         </div>
       </div>
       <div className="button sif-submit" id="sif-submit-btn">
-        <div>Register</div>
+        <div>Sign In</div>
       </div>
     </div>
   );

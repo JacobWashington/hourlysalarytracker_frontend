@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../assets/images/HST_Image_3.jpg"); /* Update to your image path */
+  background-image: url("../../assets/images/HST_Image_2.jpg"); /* Update to your image path */
   background-size: cover; /* Ensures the image covers the full area */
   background-position: center; /* Centers the image */
   background-attachment: fixed; /* Fixes the image in place */
@@ -14,11 +14,14 @@
 
 /* Content styles */
 .content {
-  position: relative; /* Needed for z-index to work */
+  position: fixed; /* Changed to fixed to center it within the viewport */
+  top: 50%; /* 50% from the top */
+  left: 50%; /* 50% from the left */
+  transform: translate(-50%, -50%); /* Move the element back by half its width and height */
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 100%; /* Full height of parent */
+  flex-direction: column; /* Adjust as needed (row/column) */
+  justify-content: center; /* Centers children vertically */
+  align-items: center; /* Centers children horizontally */
   color: white; /* Text color */
   text-align: center; /* Center align text */
   z-index: 1; /* Places content above background */

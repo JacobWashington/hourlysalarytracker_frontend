@@ -16,7 +16,7 @@ const Landing = () => {
   return (
     <div className="_landing">
       <div className="lnd-bg-image"></div>
-      <div className="content">
+      <div className="landing-content">
         <h1>Welcome to Hourly Salary Tracker</h1>
         <div className="button-container">
           <button className="btn login-btn" onClick={handleLogin}>

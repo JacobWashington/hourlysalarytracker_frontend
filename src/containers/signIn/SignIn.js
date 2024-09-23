@@ -1,15 +1,19 @@
-import { React, useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./SignIn.css";
 import SignInForm from "../../components/signInForm/SignInForm";
 
 const SignIn = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleRegister = () => {
+    navigate("/register"); // Navigate to the Register view
+  };
+
   return (
     <div className="_signIn">
       <div className="signIn-bg-image"></div>
-      <div
-        className="content"
-        style={{ backgroundImage: "../../assets/images/HST_Image_3.jpg" }}
-      >
+      <div className="content">
         <SignInForm />
       </div>
     </div>
@@ -17,3 +21,4 @@ const SignIn = () => {
 };
 
 export default SignIn;
+
