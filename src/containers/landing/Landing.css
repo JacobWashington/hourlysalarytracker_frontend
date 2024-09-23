@@ -1,0 +1,76 @@
+/* Landing container */
+._landing {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Ensures child elements do not overflow */
+}
+
+/* Background image styles */
+.lnd-bg-image {
+  position: fixed; /* Fixed to viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../assets/images/HST_Image_1.jpg"); /* Correct CSS syntax */
+  background-size: cover; /* Ensures the image covers the full area */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Fixes the image in place */
+  z-index: -1; /* Places the background behind other content */
+}
+
+/* Content styles */
+.content {
+  position: relative; /* Needed for z-index to work */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 100%; /* Full height of parent */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+  z-index: 1; /* Places content above background */
+}
+
+/* H1 styles */
+h1 {
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent black background */
+    padding: 10px 20px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0; /* Remove default margin */
+  }
+
+/* Button container */
+.button-container {
+  margin-top: 20px; /* Space between text and buttons */
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px; /* Space between buttons */
+  transition: background-color 0.3s ease;
+}
+
+.login-btn {
+  background-color: rgba(255, 255, 255); /* Light background */
+  color: #333; /* Dark text */
+}
+
+.signup-btn {
+  background-color: rgba(0, 123, 255); /* Primary color */
+  color: white; /* White text */
+}
+
+.login-btn:hover {
+  background-color: rgba(255, 255, 255, 1); /* Solid color on hover */
+}
+
+.signup-btn:hover {
+  background-color: rgba(0, 123, 255, 1); /* Solid color on hover */
+}

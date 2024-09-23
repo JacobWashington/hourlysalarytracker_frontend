@@ -1,0 +1,25 @@
+/* Background image styles */
+.register-bg-image {
+  position: fixed; /* Fixed to viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../assets/images/HST_Image_2.jpg"); /* Update to your image path */
+  background-size: cover; /* Ensures the image covers the full area */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Fixes the image in place */
+  z-index: -1; /* Places the background behind other content */
+}
+
+/* Content styles */
+.content {
+  position: relative; /* Needed for z-index to work */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100%; /* Full height of parent */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+  z-index: 1; /* Places content above background */
+}
