@@ -1,0 +1,16 @@
+.home-icon {
+    position: fixed; /* Fix the icon's position */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: translucent background */
+    border-radius: 50%; /* Make it circular */
+    padding: 10px; /* Space inside the icon */
+    cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: shadow for depth */
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.home-icon:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+}

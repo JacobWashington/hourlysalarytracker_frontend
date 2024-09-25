@@ -4,20 +4,20 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment-timezone";
 import { RxCalendar } from "react-icons/rx";
+import axios from "axios"; // Import axios for API requests
 
 const RegisterForm = (props) => {
-  /**** VARIABLES ****/
-  const timezones = moment.tz.zonesForCountry('US');
+  const timezones = moment.tz.zonesForCountry("US");
 
-  /**** STATE VARIABLES ****/
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [hireDate, setHireDate] = useState(new Date());
   const [selectedHomeStation, setSelectedHomeStation] = useState("");
   const [selectedTimezone, setSelectedTimezone] = useState("");
+  const [error, setError] = useState(""); // State for error handling
+  const [success, setSuccess] = useState(""); // State for success message
 
-  /**** HANDLERS ****/
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
   };
@@ -42,6 +42,30 @@ const RegisterForm = (props) => {
     setSelectedTimezone(event.target.value);
   };
 
+  const handleSubmit = async () => {
+    const userData = {
+      firstName,
+      lastName,
+      email,
+      hireDate: hireDate.toISOString(), // Convert date to ISO string
+      homeStation: selectedHomeStation,
+      timezone: selectedTimezone,
+    };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/users/register",
+        userData
+      ); // Adjust the URL as necessary
+      setSuccess("Registration successful!"); // Set success message
+      setError(""); // Clear any previous errors
+    } catch (error) {
+      setError("Registration failed. Please try again."); // Set error message
+      setSuccess(""); // Clear any previous success messages
+      console.error("Error submitting data:", error);
+    }
+  };
+
   return (
     <div className="rf">
       <div className="rf-input-section rf-name">
@@ -53,7 +77,7 @@ const RegisterForm = (props) => {
           />
           <input
             className="input lastname"
-            placeholder="First Name"
+            placeholder="Last Name" // Fixed placeholder
             onChange={handleLasttNameChange}
           />
         </div>
@@ -73,7 +97,6 @@ const RegisterForm = (props) => {
             className="input homeStation"
             value={selectedHomeStation}
             onChange={handleHomeStationChange}
-            placeholder="SNA"
           >
             <option value="" disabled>
               Select Home Station
@@ -94,7 +117,7 @@ const RegisterForm = (props) => {
           placeholderText="yyyy-mm-dd"
           className="input hireDate"
           calendarIconClassName="rf-calendar-icon"
-          icon=<RxCalendar />
+          icon={<RxCalendar />}
           showIcon={true}
         />
       </div>
@@ -104,7 +127,6 @@ const RegisterForm = (props) => {
             className="input timezone"
             value={selectedTimezone}
             onChange={handleTimezoneChange}
-            placeholder="Select timezone"
           >
             <option value="" disabled>
               Select timezone
@@ -117,9 +139,16 @@ const RegisterForm = (props) => {
           </select>
         </div>
       </div>
-      <div className="button rf-submit" id="rf-submit-btn">
+      <div
+        className="button rf-submit"
+        id="rf-submit-btn"
+        onClick={handleSubmit}
+      >
         <div>Register</div>
       </div>
+      {error && <p className="error-message">{error}</p>} {/* Error message */}
+      {success && <p className="success-message">{success}</p>}{" "}
+      {/* Success message */}
     </div>
   );
 };
