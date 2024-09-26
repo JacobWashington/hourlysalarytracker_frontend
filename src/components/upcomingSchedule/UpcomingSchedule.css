@@ -1,0 +1,23 @@
+.ucs {
+    padding: 20px;
+}
+
+.ucs_title_container {
+    margin-bottom: 15px;
+}
+
+.ucs_title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ucs_days_container {
+    position: relative; /* Position context for hour lines */
+}
+
+.ucs_days_list {
+    position: relative; /* Ensure it layers over the hour lines */
+    z-index: 2; /* Higher than hour lines */
+    display: flex;
+    flex-direction: column; /* Arrange days vertically */
+}

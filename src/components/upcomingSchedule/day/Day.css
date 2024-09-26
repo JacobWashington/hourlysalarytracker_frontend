@@ -1,0 +1,72 @@
+.upc-day-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  align-items: center; /* Center items vertically */
+  margin: 0.25em 1.5em;
+}
+
+.day-name {
+  margin-right: 1em; /* Space between name and progress bar */
+  flex: 1; /* Allow it to grow and fill space */
+}
+
+.shift-hours {
+  flex: 2; /* Adjust this value to control the width of the progress bar */
+  position: relative;
+  height: 20px; /* Height of the progress bar */
+  background-color: #e0e0e0; /* Background color of the bar */
+  border-radius: 5px; /* Rounded corners */
+  margin-right: 20px; /* Space between progress bar and buttons */
+}
+
+.progress-bar {
+  position: relative;
+  height: 100%;
+}
+
+.shift-highlight {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #007bff; /* Color of the shift portion */
+  transition: width 0.3s; /* Smooth transition */
+}
+
+.edit-day-container {
+  display: flex; /* Flexbox for buttons */
+  flex-direction: row; /* Horizontal alignment */
+  align-items: center; /* Center buttons vertically */
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.standard {
+    background-color: rgba(0, 123, 255, 0.7); /* Blue for standard */
+}
+
+.overtime {
+    background-color: rgba(255, 208, 0, 0.7); /* Orange for overtime */
+}
+
+.double-time {
+    background-color: rgba(255, 0, 0, 0.7); /* Red for double-time */
+}
+
+.add-shift-selector,
+.remove-shift-selector {
+  border: none;
+  border-radius: 5px;
+  padding: 5px; /* Adjust padding for better spacing */
+  width: .5em; /* Set a fixed width for better button sizing */
+  height: .5em; /* Set a fixed height for better button sizing */
+  cursor: pointer;
+  margin-left: 2px; /* Space between buttons */
+  background-color: #a0a0a0; /* Default button color */
+  display: flex; /* Use flexbox for button contents */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+.add-shift-selector:hover,
+.remove-shift-selector:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  color: white; /* Change text color on hover for contrast */
+}

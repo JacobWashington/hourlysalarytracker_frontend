@@ -1,0 +1,34 @@
+.ppb {
+    margin: 20px 0; /* Spacing around the component */
+    position: relative; /* Position relative for absolute positioning of dates */
+}
+
+.ppb_dates {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between the two dates */
+    position: absolute; /* Absolute positioning */
+    width: 100%; /* Full width of the container */
+    top: -20px; /* Position above the progress bar */
+}
+
+.ppb_date {
+    width: 40px; /* Fixed width for the date divs */
+    text-align: center; /* Center the text */
+    font-size: 14px; /* Font size for the date */
+    color: #333; /* Text color */
+}
+
+.ppb_progress-bar {
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    height: 25px; /* Height of the progress bar */
+    position: relative; /* For positioning the highlight */
+    overflow: hidden; /* Clip the highlight overflow */
+    margin-top: 10px; /* Space below the date labels */
+}
+
+.ppb_progress-highlight {
+    background-color: #007bff; /* Blue highlight color */
+    height: 100%; /* Full height of the container */
+    transition: width 0.3s ease; /* Smooth transition for width change */
+}
