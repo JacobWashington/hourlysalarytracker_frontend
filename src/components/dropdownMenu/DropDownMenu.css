@@ -1,0 +1,48 @@
+.ddm {
+  position: relative; /* Position relative for absolute positioning of the dropdown */
+  margin: 1em; /* Margin for spacing */
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align children to the right */
+}
+
+.ddm-toggle {
+  font-size: 20px; /* Increase font size */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 2em; /* Fixed width */
+  padding: 0; /* No extra padding */
+}
+
+.ddm-list {
+  position: absolute; /* Position absolute to overlay on content */
+  top: 100%; /* Position below the button */
+  right: 0; /* Align to the right */
+  background-color: white; /* Background color */
+  border: 1px solid #e0e0e0; /* Border for dropdown */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  list-style: none; /* Remove list styling */
+  padding: 0; /* No padding */
+  margin: 0; /* No margin */
+  z-index: 1000; /* Higher z-index to appear above other elements */
+}
+
+.ddm-item {
+  padding: 10px 15px; /* Padding for dropdown items */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.ddm-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+/* Mobile-specific styles */
+@media (min-width: 600px) {
+  .ddm {
+    margin: 2em; /* Increased margin for larger screens */
+  }
+
+  .ddm-toggle {
+    width: auto; /* Allow width to adjust on larger screens */
+  }
+}

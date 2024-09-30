@@ -1,7 +1,6 @@
 import { React } from "react";
 import "./UpcomingSchedule.css";
 import Day from "./day/Day";
-import PeriodProgressBar from "./periodProgressBar/PeriodProgressBar";
 
 const upcomingShifts = [
   {
@@ -46,11 +45,8 @@ const UpcomingSchedule = (props) => {
     <div className="ucs">
       <div className="ucs_title_container">
         <div className="ucs_title">
-          Upcoming Schedule: {props.upcomingStartDate} - {props.upcomingEndDate}
+          {props.upcomingStartDate} - {props.upcomingEndDate}
         </div>
-      </div>
-      <div className="ucs_period_progress_container">
-        <PeriodProgressBar date={new Date()} />
       </div>
       <div className="ucs_days_container">
         <div className="ucs_days_list">

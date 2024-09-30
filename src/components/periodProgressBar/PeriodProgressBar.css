@@ -31,4 +31,12 @@
     background-color: #007bff; /* Blue highlight color */
     height: 100%; /* Full height of the container */
     transition: width 0.3s ease; /* Smooth transition for width change */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ppd_progress_gross_pay {
+    color: black;
+    margin-right: .25em;
 }

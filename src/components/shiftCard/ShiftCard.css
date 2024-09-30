@@ -1,0 +1,145 @@
+/* Card Container */
+.shift-card {
+  background-color: #ffffff; /* Card background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the card */
+  margin: 15px; /* Margin around the card */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  max-width: 90%; /* Responsive width */
+}
+
+/* Title Container */
+.shift-card-top {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between title and icon */
+  align-items: center; /* Center items vertically */
+  position: relative; /* Position for absolute children */
+}
+
+.shift-title-container {
+  flex: 1; /* Allow it to grow and fill space */
+  text-align: center; /* Center title */
+}
+
+.shift-title {
+  font-size: 20px; /* Title font size */
+  font-weight: bold; /* Bold title */
+  color: #333; /* Dark text color */
+}
+
+/* Edit Icon Positioning */
+.shift-edit-icon {
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Selector Container */
+.shift-selector-container {
+  display: flex; /* Use flexbox for layout */
+  color: gray;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out elements */
+  margin: 1em 0; /* Space below date */
+}
+
+.shift-selector-nav {
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0 15px; /* Horizontal padding */
+  font-size: 24px; /* Font size for nav buttons */
+}
+
+/* Date Display */
+.shift-date {
+  flex: 1; /* Allow the date to take up remaining space */
+  text-align: center; /* Center the date text */
+  color: #555; /* Slightly lighter color for the date */
+  font-size: 18px; /* Font size for date */
+}
+
+/* Progress Bar Container */
+.sftcd-shift-hours {
+  height: 25px; /* Height of the progress bar */
+  background-color: #e0e0e0; /* Background color of the bar */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px; /* Space above the progress bar */
+}
+
+/* Progress Bar */
+.sftcd-shift-progress-bar {
+  position: relative; /* Positioning for the highlight */
+  height: 100%; /* Fill the parent height */
+}
+
+.sftcd-shift-highlight {
+  position: absolute;
+  top: 0;
+  height: 100%; /* Fill the height of the progress bar */
+}
+
+/* Shift Type Colors */
+.standard {
+  background-color: rgba(0, 123, 255, 0.7); /* Blue for standard */
+}
+
+.overtime {
+  background-color: rgba(255, 208, 0, 0.7); /* Orange for overtime */
+}
+
+.double-time {
+  background-color: rgba(255, 0, 0, 0.7); /* Red for double-time */
+}
+
+/* Button Container */
+.shift-button-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space buttons apart */
+  margin-top: 15px; /* Space above buttons */
+}
+
+.shift-button {
+  flex: 1; /* Each button takes equal space */
+  margin: 0 5px; /* Margin between buttons */
+  padding: 10px; /* Padding inside buttons */
+  font-size: 16px; /* Button font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.clock-in {
+  background-color: #28a745; /* Green for Clock In */
+}
+
+.clock-in:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.clock-out {
+  background-color: #dc3545; /* Red for Clock Out */
+}
+
+.clock-out:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 600px) {
+  .shift-card {
+    max-width: 400px; /* Set a max width for larger screens */
+  }
+
+  .shift-title {
+    font-size: 24px; /* Larger title size */
+  }
+
+  .shift-date {
+    font-size: 20px; /* Increase date size */
+  }
+
+  .sftcd-shift-hours {
+    height: 30px; /* Increase height for better alignment */
+  }
+}

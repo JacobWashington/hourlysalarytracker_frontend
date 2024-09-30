@@ -1,6 +1,8 @@
 import React from "react";
 import "./Day.css"; // Import your CSS styles
 
+import { FaPlus, FaMinus } from "react-icons/fa";
+
 const Day = ({ dayName, shifts }) => {
   const calculatePercentage = (time) => {
     const [hours, minutes] = time.split(":").map(Number);
@@ -10,16 +12,16 @@ const Day = ({ dayName, shifts }) => {
 
   return (
     <div className="upc-day-container">
-      <div className="day-name">{dayName}</div>
-      <div className="shift-hours">
-        <div className="progress-bar">
+      <div className="upc-day-name">{dayName}</div>
+      <div className="upc-shift-hours">
+        <div className="upc-progress-bar">
           {shifts.map((shift, index) => {
             const startPercentage = calculatePercentage(shift.start);
             const endPercentage = calculatePercentage(shift.end);
             return (
               <div
                 key={index}
-                className={`shift-highlight ${shift.shiftType.toLowerCase()}`} // Add class based on shift type
+                className={`upc-shift-highlight ${shift.shiftType.toLowerCase()}`} // Add class based on shift type
                 style={{
                   left: `${startPercentage}%`,
                   width: `${endPercentage - startPercentage}%`,
@@ -29,9 +31,13 @@ const Day = ({ dayName, shifts }) => {
           })}
         </div>
       </div>
-      <div className="edit-day-container">
-        <div className="add-shift-selector">+</div>
-        <div className="remove-shift-selector">-</div>
+      <div className="upc-edit-day-container">
+        <div className="upc-add-shift-selector">
+          <FaPlus />
+        </div>
+        <div className="upc-remove-shift-selector">
+          <FaMinus />
+        </div>
       </div>
     </div>
   );

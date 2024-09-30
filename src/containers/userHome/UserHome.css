@@ -1,0 +1,52 @@
+/* UserHome Container */
+._userHome {
+  padding: 1.5em 1em; /* Padding around the content */
+  background-color: #f7f7f7; /* Light background color */
+  min-height: 100vh; /* Full height for mobile devices */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Pay Period Title */
+.usr-hm-pp-title {
+  font-size: 24px; /* Title font size */
+  font-weight: bold; /* Bold title */
+  color: #333; /* Dark text color */
+}
+
+/* Section Styling */
+.usr-hm-section {
+  margin: .25em 0;
+}
+
+.usr-hm-hours-container {
+  display: flex;
+  justify-content: center;
+}
+
+.usr-hm-hours {
+  margin: 0 1em;
+}
+
+.usr-hm-hours-title {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.25em;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 600px) {
+  ._userHome {
+    max-width: 600px; /* Max width for larger screens */
+    margin: auto; /* Center the content */
+  }
+
+  .usr-hm-pp-title {
+    font-size: 28px; /* Larger title size for desktops */
+  }
+
+  .usr-hm-section {
+    margin-bottom: 20px; /* More margin for larger screens */
+  }
+}

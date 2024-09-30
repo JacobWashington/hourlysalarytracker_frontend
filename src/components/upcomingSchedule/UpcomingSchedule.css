@@ -12,12 +12,10 @@
 }
 
 .ucs_days_container {
-    position: relative; /* Position context for hour lines */
+    width: 100%;
 }
 
 .ucs_days_list {
-    position: relative; /* Ensure it layers over the hour lines */
-    z-index: 2; /* Higher than hour lines */
     display: flex;
     flex-direction: column; /* Arrange days vertically */
 }

@@ -11,8 +11,8 @@ const PeriodProgressBar = (props) => {
   const percentage = (currentDay / totalDaysInMonth) * 100;
 
   // Get first and last day of the month with formatted date
-  const firstDay = date.startOf('month').format('MMM D'); // First day of the month
-  const lastDay = date.endOf('month').format('MMM D'); // Last day of the month
+  const firstDay = date.startOf("month").format("MMM D"); // First day of the month
+  const lastDay = date.endOf("month").format("MMM D"); // Last day of the month
 
   return (
     <div className="ppb">
@@ -24,7 +24,11 @@ const PeriodProgressBar = (props) => {
         <div
           className="ppb_progress-highlight"
           style={{ width: `${percentage}%` }}
-        />
+        >
+          <div className="ppd_progress_gross_pay">
+            {`$${props.grossPay}`}
+          </div>
+        </div>
       </div>
     </div>
   );

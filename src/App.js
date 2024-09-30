@@ -5,12 +5,14 @@ import Register from "./containers/register/Register";
 import Landing from "./containers/landing/Landing";
 import SignIn from "./containers/signIn/SignIn";
 import UserHome from "./containers/userHome/UserHome";
+import DropDownMenu from "./components/dropdownMenu/DropDownMenu";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <HomeIcon />
+        <DropDownMenu />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/register" element={<Register />} />
